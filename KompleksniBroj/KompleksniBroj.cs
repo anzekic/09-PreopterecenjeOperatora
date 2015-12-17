@@ -28,14 +28,18 @@ namespace Vsite.CSharp
 
         public static KompleksniBroj operator +(KompleksniBroj br1, KompleksniBroj br2)
         {
-            // TODO: implementirati binarni operator + (za zbrajanje dva kompleksna broja)
-            throw new NotImplementedException();
+            return new KompleksniBroj(br1.RealniDio + br2.RealniDio, br1.ImaginarniDio + br1.ImaginarniDio);
         }
 
-        // TODO: implementirati binarni operator - (za oduzimanje dva kompleksna broja)
+        public static KompleksniBroj operator -(KompleksniBroj br1, KompleksniBroj br2)
+        {
+            return new KompleksniBroj(br1.RealniDio - br2.RealniDio, br1.ImaginarniDio - br1.ImaginarniDio);
+        }
 
-
-        // TODO: implementirati preopterećeni unarni operator - (za promjenu predznaka)
+        public static KompleksniBroj operator -(KompleksniBroj br)
+        {
+            return new KompleksniBroj(-br.RealniDio, -br.ImaginarniDio);
+        }
 
     }
 }
